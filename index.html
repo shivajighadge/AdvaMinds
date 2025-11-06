@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdvaMinds EduServe - Empowering Educators, Enriching Minds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DC1F26',
+                        secondary: '#3E3689',
+                        accent: '#FDB913',
+                        lightblue: '#4FA9C7',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-secondary">
+                        <span class="text-lightblue">Adva</span><span class="text-accent">Minds</span>
+                        <span class="text-sm block text-gray-600">EduServe Pvt. Ltd.</span>
+                    </h1>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary transition">About</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link text-gray-700 hover:text-primary transition">Products</a>
+                        <div class="dropdown-menu">
+                            <a href="https://advamindscareerinstitute.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-graduation-cap"></i>Career Institute
+                            </a>
+                            <a href="https://coachingbuddy.in" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-chalkboard-teacher"></i>Coaching Buddy
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-primary transition">Services</a>
+                    <a href="#impact" class="nav-link text-gray-700 hover:text-primary transition">Impact</a>
+                    <a href="#roadmap" class="nav-link text-gray-700 hover:text-primary transition">Roadmap</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded">About</a>
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded flex items-center justify-between">
+                        <span>Products</span>
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="mobile-dropdown-menu hidden pl-4 space-y-1 mt-1">
+                        <a href="https://advamindscareerinstitute.com" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 text-gray-600 hover:bg-primary hover:text-white rounded text-sm">
+                            <i class="fas fa-graduation-cap mr-2"></i>AdvaMinds Career Institute
+                        </a>
+                        <a href="https://coachingbuddy.in" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 text-gray-600 hover:bg-primary hover:text-white rounded text-sm">
+                            <i class="fas fa-chalkboard-teacher mr-2"></i>Coaching Buddy
+                        </a>
+                    </div>
+                </div>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded">Services</a>
+                <a href="#impact" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded">Impact</a>
+                <a href="#roadmap" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded">Roadmap</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 min-h-screen flex items-center bg-white relative overflow-hidden">
+        <!-- Subtle Educational Pattern Background -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="20" r="1" fill="#3E3689"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8 animate-fade-in">
+                    <!-- Brand Name with Icon -->
+                    <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-50 to-purple-50 px-6 py-3 rounded-full border border-blue-100">
+                        <i class="fas fa-atom text-2xl text-lightblue"></i>
+                        <span class="text-sm font-semibold text-gray-700 tracking-wide">WELCOME TO ADVAMINDS</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                        <span class="text-gray-900">Empowering</span>
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-lightblue via-secondary to-accent mt-2">
+                            Educators,
+                        </span>
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-lightblue mt-2">
+                            Enriching Minds!
+                        </span>
+                    </h1>
+
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-xl">
+                        Connecting students with verified coaching centers across India through innovative, scalable, and inclusive skill development.
+                    </p>
+                </div>
+
+                <!-- Right Content - Visual Element -->
+                <div class="hidden lg:block relative">
+                    <div class="relative">
+                        <!-- Professional Educational Image -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80" alt="Professional Education" class="w-full h-[600px] object-cover">
+
+                            <!-- Dark Gradient Overlay for Better Text Readability -->
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/40"></div>
+                        </div>
+
+                        <!-- Decorative Element -->
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-lightblue/20 to-secondary/20 rounded-2xl rotate-12 -z-10"></div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl -rotate-12 -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Overview Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Business Overview</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary to-red-600 text-white p-8 rounded-2xl shadow-2xl mb-12">
+                <p class="text-xl md:text-2xl font-semibold text-center leading-relaxed">
+                    Empowering India's next-gen workforce through innovative, scalable, and inclusive skill development.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800" alt="Classroom" class="rounded-2xl shadow-xl">
+                </div>
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        <span class="font-bold text-secondary">AdvaMinds Eduserve Private Limited</span>, based in Pune, connects students with verified coaching centers across academics, competitive exams, vocational skills, and extracurriculars.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Our tech-enabled platform simplifies the search for quality education by offering a range of verified options, personalized recommendations, and digital tools for institutions.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We aim to enhance learning outcomes and make education accessible, affordable, and outcome-driven. With a hybrid learning model, we provide students with both online and offline learning experiences, empowering them to achieve success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision & Core Values Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Company Objective</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- Mission -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-bullseye text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-secondary mb-4">Mission</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                To connect students with verified coaching centers, enhancing learning outcomes through tech-driven solutions and empowering institutions with tools for effective education.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
+                                <i class="fas fa-eye text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-secondary mb-4">VISION</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                To be India's most trusted educational platform, transforming the tutoring ecosystem with accessible, high-quality learning experiences for all.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Values -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <div class="flex items-center justify-center mb-8">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-secondary">Core Values</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="border-l-4 border-primary pl-4 py-2">
+                        <h4 class="text-xl font-bold text-secondary mb-2">1. Integrity</h4>
+                        <p class="text-gray-700">Upholding transparency and trust in all our interactions with students, educators, and institutions.</p>
+                    </div>
+                    <div class="border-l-4 border-lightblue pl-4 py-2">
+                        <h4 class="text-xl font-bold text-secondary mb-2">2. Innovation</h4>
+                        <p class="text-gray-700">Continuously evolving our platform with cutting-edge technology to enhance learning experiences.</p>
+                    </div>
+                    <div class="border-l-4 border-accent pl-4 py-2">
+                        <h4 class="text-xl font-bold text-secondary mb-2">3. Accessibility</h4>
+                        <p class="text-gray-700">Ensuring quality education is available to all, regardless of geography or background.</p>
+                    </div>
+                    <div class="border-l-4 border-primary pl-4 py-2">
+                        <h4 class="text-xl font-bold text-secondary mb-2">4. Collaboration</h4>
+                        <p class="text-gray-700">Fostering strong partnerships with coaching centers and educational institutions to deliver impactful results.</p>
+                    </div>
+                    <div class="border-l-4 border-lightblue pl-4 py-2">
+                        <h4 class="text-xl font-bold text-secondary mb-2">5. Student-Centricity</h4>
+                        <p class="text-gray-700">Putting students' needs at the heart of everything we do, offering personalized guidance and support.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problem Statement -->
+            <div class="mt-16 bg-gradient-to-r from-secondary to-purple-900 text-white p-8 rounded-2xl shadow-2xl">
+                <h3 class="text-3xl font-bold mb-6 text-center">What if the Right Opportunity Could Change a Life Forever?</h3>
+                <p class="text-lg leading-relaxed text-center">
+                    Despite India's demographic dividend, millions of youth—especially in rural and semi-urban areas—remain unemployable due to outdated education, lack of soft skills, and limited access to industry-relevant training. The gap between academic learning and workplace readiness continues to hinder economic inclusion and career growth for underserved populations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Provide Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Provide?</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Centralized Platform -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-t-4 border-primary">
+                    <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-search text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Centralized Platform for Coaching Discovery</h3>
+                    <p class="text-gray-700 text-center leading-relaxed">
+                        Our user-friendly platform enables students to easily find, compare, and enroll in verified coaching centers tailored to their specific needs.
+                    </p>
+                </div>
+
+                <!-- Digital Enablement -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-t-4 border-lightblue">
+                    <div class="w-20 h-20 bg-lightblue bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-laptop-code text-lightblue text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Digital Enablement for Coaching Centers</h3>
+                    <p class="text-gray-700 text-center leading-relaxed">
+                        We provide coaching institutes with essential digital tools, including CRM, student management systems, and digital marketing support to enhance their operations and online visibility.
+                    </p>
+                </div>
+
+                <!-- Personalized Recommendations -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-t-4 border-accent">
+                    <div class="w-20 h-20 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-check text-accent text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Personalized Recommendations & Reviews</h3>
+                    <p class="text-gray-700 text-center leading-relaxed">
+                        Leveraging AI-driven recommendations, our platform ensures students are matched with the most suitable coaching options based on their preferences, academic goals, and location, backed by verified reviews & ratings.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Do We Offer?</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th class="px-6 py-4 text-left text-lg font-bold">Service/Product</th>
+                                <th class="px-6 py-4 text-left text-lg font-bold">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4 font-semibold text-secondary">Coaching Center Discovery</td>
+                                <td class="px-6 py-4 text-gray-700">A platform to search, compare, and enroll in verified coaching centers across academic, professional, and extracurricular fields.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4 font-semibold text-secondary">Digital Tools for Institutes</td>
+                                <td class="px-6 py-4 text-gray-700">Providing CRM, student management systems, digital marketing support, and operational tools to enhance coaching center effectiveness.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4 font-semibold text-secondary">AI-Driven Recommendations</td>
+                                <td class="px-6 py-4 text-gray-700">Personalized coaching suggestions based on students' goals, preferences, and location to ensure a better match with institutes.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4 font-semibold text-secondary">Online Course Sales & Partner Programs</td>
+                                <td class="px-6 py-4 text-gray-700">Selling online courses, recorded modules, and certification programs in collaboration with educational partners.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4 font-semibold text-secondary">Lead Generation Services</td>
+                                <td class="px-6 py-4 text-gray-700">Generating and providing verified leads or inquiries for coaching institutes based on their courses and location.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4 font-semibold text-secondary">Event & Workshop Hosting</td>
+                                <td class="px-6 py-4 text-gray-700">Hosting paid seminars, webinars, and workshops to promote skill development and academic excellence.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4 font-semibold text-secondary">Freemium & Premium Listings for Institutes</td>
+                                <td class="px-6 py-4 text-gray-700">Free basic listings with the option for premium placement and additional features for institutes looking to enhance visibility.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4 font-semibold text-secondary">Student Reviews & Ratings</td>
+                                <td class="px-6 py-4 text-gray-700">Transparent review and rating system to ensure informed decision-making for students.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Impact Section -->
+    <section id="impact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Social Impact</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Impact 1 -->
+                <div class="bg-gradient-to-br from-primary to-red-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl font-bold">01</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Bridging Educational Gaps in Tier-2 and Tier-3 Cities</h3>
+                    <p class="text-white text-opacity-90 leading-relaxed text-center">
+                        By expanding access to quality coaching centers in underserved regions, AdvaMinds empowers students from smaller cities to pursue academic and professional success, reducing educational disparities.
+                    </p>
+                </div>
+
+                <!-- Impact 2 -->
+                <div class="bg-gradient-to-br from-secondary to-purple-900 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl font-bold">02</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Enhancing Digital Literacy for Coaching Institutes</h3>
+                    <p class="text-white text-opacity-90 leading-relaxed text-center">
+                        Through the provision of digital tools and training, AdvaMinds enables local coaching centers to modernize their operations, improving efficiency and reach, and fostering a digitally inclusive educational ecosystem.
+                    </p>
+                </div>
+
+                <!-- Impact 3 -->
+                <div class="bg-gradient-to-br from-lightblue to-blue-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl font-bold">03</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Supporting Diverse Learning Needs</h3>
+                    <p class="text-white text-opacity-90 leading-relaxed text-center">
+                        The platform's wide range of educational categories, including academics, vocational skills, languages, arts, and sports, ensures that students can find resources tailored to their individual interests and aspirations, promoting holistic development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why AdvaMinds Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why AdvaMinds?</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reason 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition hover:-translate-y-2 duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Comprehensive Educational Ecosystem</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We provide a one-stop platform that covers all learning needs, from academic tutoring to competitive exams, vocational skills, and extracurricular activities.
+                    </p>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition hover:-translate-y-2 duration-300">
+                    <div class="w-16 h-16 bg-lightblue bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-lightblue text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Verified and Trusted Coaching Centers</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We ensure that only quality-checked, verified coaching centers are listed, giving students peace of mind in their choices.
+                    </p>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition hover:-translate-y-2 duration-300">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-accent text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Student-Centric Approach</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        With a focus on personalized guidance and a hybrid learning model, we cater to the diverse needs of students, ensuring the best fit for their learning goals.
+                    </p>
+                </div>
+
+                <!-- Reason 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition hover:-translate-y-2 duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-microchip text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Tech-Driven Solutions</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our platform leverages AI and digital tools to offer personalized recommendations and operational support, enhancing the learning experience for both students and institutes.
+                    </p>
+                </div>
+
+                <!-- Reason 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition hover:-translate-y-2 duration-300">
+                    <div class="w-16 h-16 bg-lightblue bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-check-circle text-lightblue text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Quality Assurance</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We ensure that only quality-checked, verified coaching centers are listed, giving students peace of mind in their choices.
+                    </p>
+                </div>
+
+                <!-- Reason 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition hover:-translate-y-2 duration-300">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-book-reader text-accent text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Personalized Learning</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        With a focus on personalized guidance and a hybrid learning model, we cater to the diverse needs of students, ensuring the best fit for their learning goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Roadmap for Near Future</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <!-- Journey Path Roadmap -->
+            <div class="relative">
+                <!-- Connected Path Lines -->
+                <svg class="hidden md:block absolute top-0 left-0 w-full h-full pointer-events-none" style="z-index: 1;">
+                    <!-- Line 1 to 2 -->
+                    <line x1="17%" y1="80" x2="33%" y2="180" stroke="#DC1F26" stroke-width="3" stroke-dasharray="8,4"/>
+                    <!-- Line 2 to 3 -->
+                    <line x1="42%" y1="180" x2="58%" y2="80" stroke="#4FA9C7" stroke-width="3" stroke-dasharray="8,4"/>
+                    <!-- Line 3 to 4 -->
+                    <line x1="67%" y1="80" x2="83%" y2="180" stroke="#FDB913" stroke-width="3" stroke-dasharray="8,4"/>
+                </svg>
+
+                <!-- Roadmap Milestones -->
+                <div class="relative grid grid-cols-1 md:grid-cols-4 gap-12 pt-8" style="z-index: 2;">
+                    <!-- Milestone 1 -->
+                    <div class="flex flex-col items-center group">
+                        <div class="relative mb-6">
+                            <!-- Milestone Circle -->
+                            <div class="w-32 h-32 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 relative z-10">
+                                <i class="fas fa-globe text-white text-4xl"></i>
+                            </div>
+                            <!-- Glow Effect -->
+                            <div class="absolute inset-0 bg-primary rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                        </div>
+                        <!-- Title Card -->
+                        <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-primary transform transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2">
+                            <h3 class="text-lg font-bold text-secondary text-center leading-tight">Expand Coaching Network</h3>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="flex flex-col items-center group md:mt-20">
+                        <div class="relative mb-6">
+                            <div class="w-32 h-32 bg-gradient-to-br from-secondary to-purple-900 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 relative z-10">
+                                <i class="fas fa-cogs text-white text-4xl"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-secondary rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-secondary transform transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2">
+                            <h3 class="text-lg font-bold text-secondary text-center leading-tight">Enhance Technological Capabilities</h3>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="flex flex-col items-center group">
+                        <div class="relative mb-6">
+                            <div class="w-32 h-32 bg-gradient-to-br from-lightblue to-blue-600 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 relative z-10">
+                                <i class="fas fa-rocket text-white text-4xl"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-lightblue rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-lightblue transform transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2">
+                            <h3 class="text-lg font-bold text-secondary text-center leading-tight">Geographical Expansion</h3>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="flex flex-col items-center group md:mt-20">
+                        <div class="relative mb-6">
+                            <div class="w-32 h-32 bg-gradient-to-br from-accent to-yellow-600 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 relative z-10">
+                                <i class="fas fa-chart-line text-white text-4xl"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-accent rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-accent transform transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2">
+                            <h3 class="text-lg font-bold text-secondary text-center leading-tight">Increase Trainer & Learner Network</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-secondary to-purple-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <!-- Contact Information Grid -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Phone -->
+                <div class="text-center bg-white bg-opacity-10 rounded-2xl p-8 hover:bg-opacity-20 transition">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Phone</h3>
+                    <p class="text-lg text-white text-opacity-90">+91 9673 123 006</p>
+                </div>
+
+                <!-- Email -->
+                <div class="text-center bg-white bg-opacity-10 rounded-2xl p-8 hover:bg-opacity-20 transition">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Email</h3>
+                    <p class="text-lg text-white text-opacity-90">hello@advaminds.com</p>
+                </div>
+
+                <!-- Address -->
+                <div class="text-center bg-white bg-opacity-10 rounded-2xl p-8 hover:bg-opacity-20 transition">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Address</h3>
+                    <p class="text-lg text-white text-opacity-90 leading-relaxed">
+                        Flat No. 9, Blue Hill Society,<br>
+                        NDA Pashan Road, Bavdhan,<br>
+                        Pune, Maharashtra, India, 411021
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span class="text-lightblue">Adva</span><span class="text-accent">Minds</span>
+                    </h3>
+                    <p class="text-gray-400 mb-4">Empowering Educators, Enriching Minds!</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
+                        <li><a href="#impact" class="text-gray-400 hover:text-primary transition">Impact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Coaching Discovery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Digital Tools</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">AI Recommendations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Online Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 AdvaMinds EduServe Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 bg-primary hover:bg-red-700 text-white w-12 h-12 rounded-full shadow-lg hover:shadow-xl transition opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
