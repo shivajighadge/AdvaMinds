@@ -3,6 +3,7 @@
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Account for fixed navbar height + some extra space */
 }
 
 /* Custom Scrollbar */
