@@ -76,26 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Scroll to Top Button
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-    
-    if (scrollToTopBtn) {
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.add('show');
-            } else {
-                scrollToTopBtn.classList.remove('show');
-            }
-        });
-        
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-    
     // Active Navigation Link on Scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinksAll = document.querySelectorAll('.nav-link');
